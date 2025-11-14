@@ -1,9 +1,9 @@
 import express from 'express';
-import fruit from  './datajs';
+import fruit from  './data.js';
 import 'dotenv/config';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const SERVERPORT = process.env.SERVERPORT || 3000;
 
 app.get('/fruits', async (req, res) => {
     try {
@@ -14,6 +14,6 @@ app.get('/fruits', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Fut a szervered! http://localhost:${PORT}`); 
+app.listen(SERVERPORT, () => {
+    console.log(`Fut a szervered! http://localhost:${SERVERPORT}`); 
 });
