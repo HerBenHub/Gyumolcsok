@@ -1,9 +1,13 @@
 import express from 'express';
 import fruit from  './data.js';
 import 'dotenv/config';
+import logger from '../logger/logger.js';
 
 const app = express();
 const SERVERPORT = process.env.SERVERPORT || 3000;
+
+app.use(logger);
+
 
 app.get('/fruits', async (req, res) => {
     try {
