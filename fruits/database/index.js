@@ -22,7 +22,7 @@ app.get('/fruits/:id', async (req, res) => {
     const { id } = req.params;
 
     if(id < 0){
-        return  res.status(400).json({ error: 'Az ID nem lehet negatív szám !' });
+        return  res.status(400).json({ error: 'Az ID nem lehet negatív szám!' });
     }
 
     try {
@@ -37,10 +37,10 @@ app.post('/fruits', express.json(), async (req, res) => {
     const { name, color, price } = req.body;
 
     if(price < 0){
-        return res.status(400).json({ error: 'Az ár nem lehet negatív szám !' });
+        return res.status(400).json({ error: 'Az ár nem lehet negatív szám!' });
     }
     if(name, color != String){
-        return res.status(400).json({ error: 'A név és a szín csak szöveg lehet !' });
+        return res.status(400).json({ error: 'A név és a szín csak szöveg lehet!' });
     }
 
     try {
@@ -56,13 +56,13 @@ app.put('/fruits/:id', express.json(), async (req, res) => {
     const { name, color, price } = req.body;
 
     if(id < 0){
-        return  res.status(400).json({ error: 'Az ID nem lehet negatív szám !' });
+        return  res.status(400).json({ error: 'Az ID nem lehet negatív szám!' });
     }
     if(price < 0){
-        return res.status(400).json({ error: 'Az ár nem lehet negatív szám !' });
+        return res.status(400).json({ error: 'Az ár nem lehet negatív szám!' });
     }
     if(name, color != String){
-        return res.status(400).json({ error: 'A név és a szín csak szöveg lehet !' });
+        return res.status(400).json({ error: 'A név és a szín csak szöveg lehet!' });
     }
 
     try {
@@ -81,7 +81,7 @@ app.delete('/fruits/:id', async (req, res) => {
     const { id } = req.params;
 
     if(id < 0){
-        return  res.status(400).json({ error: 'Az ID nem lehet negatív szám !' });
+        return  res.status(400).json({ error: 'Az ID nem lehet negatív szám!' });
     }
 
     try {
